@@ -1,15 +1,19 @@
 import React, { useContext } from 'react';
-import { ThemeContext } from './GetTheme';
-import { SettingsContext } from './GetSettings';
+import { TextColorContext } from './GetTextColor';
+import { BgColorContext } from './GetBgColor';
+import { FontSizeContext } from './GetFontSize';
 
-function Reactor(props) {
-    const theme = useContext(ThemeContext);
-    const settings = useContext(SettingsContext);
+
+const Reactor = (props) => {
+    const textColor = useContext(TextColorContext);
+    const fontSize = useContext(FontSizeContext);
+    const bgColor = useContext(BgColorContext);
     return (
         <div
             style={{
-                color: theme.themeColor,
-                fontSize: settings.fontSize,
+                color: textColor.color,
+                fontSize: fontSize.fontSize,
+                backgroundColor: bgColor.backgroundColor
             }}
         >
             {props.children}
