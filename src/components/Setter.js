@@ -2,12 +2,14 @@ import React, { useContext } from 'react';
 import { TextColorContext } from './GetTextColor';
 import { FontSizeContext } from './GetFontSize';
 import { BgColorContext } from './GetBgColor';
-import bio from './GetBio';
+import { bioContext } from './GetBio';
+
 
 const Setter = (props) => {
     const textColor = useContext(TextColorContext);
     const fontSize = useContext(FontSizeContext);
     const bgColor = useContext(BgColorContext);
+    const bio = useContext(bioContext);
 
     return (
 
@@ -51,9 +53,7 @@ const Setter = (props) => {
                     <label htmlFor="lang" className="col-form-label" >Change Language</label>
                     <div className="col-sm-10">
                         <select className="custom-select mr-sm-2" id="lang"
-                    onChange={e => {
-                        bio.updateLang(e);
-                    }}>
+                            onChange={ e => {bio.updateLang(e) }} >
                         <option value="English">English</option>
                         <option value="Russian">Russian</option>
                     </select>
