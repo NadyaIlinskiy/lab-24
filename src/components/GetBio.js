@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export const bioContext = React.createContext();
+export const BioContext = React.createContext();
 
 const GetBio = (props) => {
     const aboutMe = { 
@@ -18,8 +18,8 @@ const GetBio = (props) => {
       }    
       }   
     return (
-  <bioContext.Provider value={{bio, updateLang}}>
+  <BioContext.Provider value={bio, updateLang}>
         <div className="bio">  {props.children} </div>  
-  </bioContext.Provider>)
+  </BioContext.Provider>)
 }
 export default GetBio;
