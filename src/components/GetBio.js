@@ -19,7 +19,7 @@ const GetBio = (props) => {
       }   
     return (
   <BioContext.Provider value={{bio, updateLang}}>
-        <div className="bio">  {props.children} </div>  
+        <div className="bio">   {props.children}   </div>
   </BioContext.Provider>)
 }
 export default GetBio;
