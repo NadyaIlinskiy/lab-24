@@ -6,18 +6,19 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Links and Resources
 
-- [Pull Request](https://github.com/NadyaIlinskiy/lab-24/pull/1)
-- [Code SendBox](https://codesandbox.io/s/small-bush-9lk8l)
-- [Netlify](https://csb-9lk8l.netlify.com)
+- [Code SendBox](https://codesandbox.io/s/thirsty-faraday-875z4)
+- [Netlify](https://csb-875z4.netlify.com)
 
 ### Modules
 
-- input.js
-- form.js
-- index.js
-- styles.css
-
-
+- App.js
+- GetBio.js
+- GetStyling.js
+- Reactor.js
+- Setter.js
+- img/nadya.jpg
+- styles/_variables
+- styles.scss
 
 
 ## Available Scripts

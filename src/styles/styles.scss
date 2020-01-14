@@ -7,8 +7,7 @@ body {
     background-color: $background-color;
     .bio {
         text-align: justify;
-        width: 98%;
-        padding: $spacer !important;    
+        width: 98%;       
 }
 .img{
     width: 200px;
@@ -18,4 +17,7 @@ body {
 .my-text-primary{
     color: $my-text-primary;
 }
+  p {
+      padding: $spacer !important; 
+    } 
 }

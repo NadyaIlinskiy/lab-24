@@ -3,29 +3,30 @@ import Reactor from './Reactor';
 import Setter from './Setter';
 import Bio from './GetBio';
 import Styling from './GetStyling';
-import "../styles/styles.scss";
 import photo from './../img/nadya.jpg'
+
+import "../styles/styles.scss";
 
 function App() {
     return (      
         <div className="container justify-content-center">  
             <h2 className="h2 my-text-primary justify-content-center">Career pitch</h2>
          <Styling>
-                <Bio>            
-                    <Reactor>
-                        <div className="row">
-                            <div className="col reactor">
-                                <img src={photo} alt="nadya" className="img" />
-                            </div>
-                               </div> 
-                        <div className="col"> </div>
-                    </Reactor>                                    
-                    <Setter />
+                <Bio>   
+                    <div className="row">
+                        <div className="col" >
+                            <img src={photo} alt="nadya" className="img" />         
+                                <Reactor>         
+                                </Reactor>                                    
+                        </div>
+                    
+                        <div className="col">  
+                            <Setter /> 
+                        </div>
+                    </div>
                 </Bio>
             </Styling>
             </div>
-    
-
     );
 }
 
