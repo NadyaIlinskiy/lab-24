@@ -13,7 +13,7 @@ const Reactor = (props) => {
                 fontSize: style.fontSize,
                 backgroundColor: style.backgroundColor
             }}
-        >  
+        >  {bio.bio}
             {props.children}
         </div>
     );

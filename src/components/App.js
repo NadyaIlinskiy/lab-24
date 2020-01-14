@@ -11,16 +11,15 @@ function App() {
         <div className="container justify-content-center">  
             <h2 className="h2 my-text-primary justify-content-center">Career pitch</h2>
          <Styling>
-                <Bio>            
-                    <Reactor>
-                        <div className="row">
-                            <div className="col reactor">
-                                <img src={photo} alt="nadya" className="img" />
-                            </div>
-                               </div> 
-                        <div className="col"> </div>
+                <Bio>   
+                    <div className="row">
+                        <div className="col reactor">
+                            <img src={photo} alt="nadya" className="img" />         
+                    <Reactor>         
                     </Reactor>                                    
-                    <Setter />
+                 </div>
+                    
+                <div className="col">  <Setter /> </div></div>
                 </Bio>
             </Styling>
             </div>

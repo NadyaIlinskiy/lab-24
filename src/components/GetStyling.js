@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 export const StylingContext = React.createContext();
 
-const GetStyling = (props) => {
+const GetStyling = props => {
     const [state, setState] = useState({
-        fontSize: '16px',
+        fontSize: "16px",
         updateFontSize: size => {
             setState({ ...state, fontSize: size });
-        }, 
-        backgroundColor: '#241b0c',
-        updateColor: color => {
+        },
+        backgroundColor: "#241b0c",
+        updateBgColor: color => {
             setState({ ...state, backgroundColor: color });
         },
-        color: '#f3dc9165',
+        color: "#f3dc9165",
         updateColor: color => {
             setState({ ...state, color: color });
         }
@@ -20,11 +20,9 @@ const GetStyling = (props) => {
 
     return (
         <StylingContext.Provider value={state}>
-            <div>
-                {props.children}
-            </div>
+            <div>{props.children}</div>
         </StylingContext.Provider>
     );
-}
+};
 
 export default GetStyling;
