@@ -1,15 +1,11 @@
 import React, { useContext } from 'react';
-import { TextColorContext } from './GetTextColor';
-import { FontSizeContext } from './GetFontSize';
-import { BgColorContext } from './GetBgColor';
-import { bioContext } from './GetBio';
+import { BioContext } from './GetBio';
+import { StylingContext } from './GetStyling';
 
 
 const Setter = (props) => {
-    const textColor = useContext(TextColorContext);
-    const fontSize = useContext(FontSizeContext);
-    const bgColor = useContext(BgColorContext);
-    const bio = useContext(bioContext);
+    const bio = useContext(BioContext);
+    const styling = useContext(StylingContext);
 
     return (
 
@@ -20,9 +16,9 @@ const Setter = (props) => {
                <div className="col-sm-10">
                     <input className="form-control" id="textColor"
                      type='text'
-                     value={textColor.color}
+                     value={styling.color}
                      onChange={e => {
-                    textColor.updateColor(e.target.value);
+                    styling.updateColor(e.target.value);
                     }}/>
                 </div>
                 </div>
@@ -31,9 +27,9 @@ const Setter = (props) => {
                     <div className="col-sm-10">
                     <input className="form-control" id="fontSize"
                     type='text'
-                        value={fontSize.fontSize}
+                            value={styling.fontSize}
                         onChange={e => {
-                    fontSize.updateFontSize(e.target.value);
+                            styling.updateFontSize(e.target.value);
                         }} />
                     </div>
                 </div>
@@ -42,9 +38,9 @@ const Setter = (props) => {
                     <div className="col-sm-10">
                     <input className="form-control" id="bgColor"
                     type='text'
-                    value={bgColor.backgroundColor}
+                            value={styling.backgroundColor}
                     onChange={e => {
-                        bgColor.updateColor(e.target.value);
+                        styling.updateColor(e.target.value);
                     }}
                 />
                 </div>

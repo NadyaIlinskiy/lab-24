@@ -1,23 +1,19 @@
 import React, { useContext } from 'react';
-import { TextColorContext } from './GetTextColor';
-import { BgColorContext } from './GetBgColor';
-import { FontSizeContext } from './GetFontSize';
-import { bioContext } from './GetBio';
+import { BioContext } from './GetBio';
+import { StylingContext } from './GetStyling';
 
 
 const Reactor = (props) => {
-    const textColor = useContext(TextColorContext);
-    const fontSize = useContext(FontSizeContext);
-    const bgColor = useContext(BgColorContext);
-    const bio = useContext(bioContext);
+    const bio = useContext(BioContext);
+    const style = useContext(StylingContext)
     return (
         <div
             style={{
-                color: textColor.color,
-                fontSize: fontSize.fontSize,
-                backgroundColor: bgColor.backgroundColor
+                color: style.color,
+                fontSize: style.fontSize,
+                backgroundColor: style.backgroundColor
             }}
-        > 
+        >  
             {props.children}
         </div>
     );
